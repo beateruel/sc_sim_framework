@@ -1,0 +1,57 @@
+{
+  "times": {
+    "working_hours_per_day": 8,
+    "approval_phase_min_time_h": 12,
+    "approval_phase_max_time_h": 12,
+    "prototyping_contract_planning_update_min_time_h": 14,
+    "prototyping_contract_planning_update_max_time_h": 14,
+    "prototyping_design_min_time_h": 26,
+    "prototyping_design_max_time_h": 26,
+    "prototyping_inventory_check_min_time_h": 3,
+    "prototyping_inventory_check_max_time_h": 3,
+    "fulfillment_contract_planning_update_min_time_h": 36,
+    "fulfillment_contract_planning_update_max_time_h": 36,
+    "fulfillment_launching_purchasing_order_min_time_h": 12,
+    "fulfillment_launching_purchasing_order_max_time_h": 12,
+    "fulfillment_material_reception_min_time_h": 6,
+    "fulfillment_material_reception_max_time_h": 6,
+    "fulfillment_material_air_transport_time_h": 24,
+    "fulfillment_material_road_transport_time_h": 48,
+    "fulfillment_quality_check_min_time_h": 10,
+    "fulfillment_quality_check_max_time_h": 10,
+    "product_air_delivery_time_h": 16,
+    "product_road_delivery_time_h": 40,
+    "sample_reception_road_transport_time_h": 16,
+    "prototyping_type": "PHYSICAL"
+  },
+  "operational": {
+    "air_transport_mode": "AIR",
+    "road_transport_mode": "ROAD",
+    "product_production_rate_min_units_per_h": 6,
+    "product_production_rate_max_units_per_h": 6,
+    "product_order_min_units": 150,
+    "product_order_max_units": 150,
+    "product_material_kg_per_piece": 0.5,
+    "sample_reorder_quantity_units": 80,
+    "sample_reorder_point_units": 10,
+    "sample_order_units": 5
+  },
+  "economic": {
+    "office_work_salary_eur_per_h": 9.75,
+    "operator_work_salary_eur_per_h": 6.5,
+    "product_material_unit_price_eur": 3.5,
+    "sample_material_unit_price_eur": 1.5,
+    "product_distribution_air_transport_cost_eur": 500,
+    "product_distribution_road_transport_cost_eur": 200,
+    "sample_distribution_road_transport_cost_eur": 200,
+    "sample_distribution_air_transport_cost_eur": 500
+  },
+  "environmental": {
+    "grid_carbon_intensity_gco2_per_kwh": 245,
+    "product_material_waste_percentage": 0.1,
+    "office_energy_consumption_kwh_per_h": 0.16,
+    "shopfloor_energy_consumption_kwh_per_h": 0.36,
+    "road_emission_factor_gco2_per_tkm": 74,
+    "air_emission_factor_gco2_per_tkm": 629
+  }
+}

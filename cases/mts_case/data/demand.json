@@ -1,0 +1,208 @@
+{
+  "demand": [
+    {
+      "month": 1,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 35000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 35000
+        }
+      ]
+    },
+    {
+      "month": 2,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 30000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 30000
+        }
+      ]
+    },
+    {
+      "month": 3,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 38000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 38000
+        }
+      ]
+    },
+    {
+      "month": 4,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 32000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 32000
+        }
+      ]
+    },
+    {
+      "month": 5,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 42000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 42000
+        }
+      ]
+    },
+    {
+      "month": 6,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 40000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 40000
+        }
+      ]
+    },
+    {
+      "month": 7,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 38000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 38000
+        }
+      ]
+    },
+    {
+      "month": 8,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 36000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 36000
+        }
+      ]
+    },
+    {
+      "month": 9,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 30000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 30000
+        }
+      ]
+    },
+    {
+      "month": 10,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 20000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 20000
+        }
+      ]
+    },
+    {
+      "month": 11,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 35000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 35000
+        }
+      ]
+    },
+    {
+      "month": 12,
+      "items": [
+        {
+          "product_id": "1",
+          "product_name": "P1",
+          "quantity_unit": "units",
+          "quantity_units": 25000
+        },
+        {
+          "product_id": "2",
+          "product_name": "P2",
+          "quantity_unit": "units",
+          "quantity_units": 25000
+        }
+      ]
+    }
+  ]
+}

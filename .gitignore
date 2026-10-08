@@ -1,0 +1,57 @@
+# ==========================================
+# Python Environment & Cache
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+target/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# ==========================================
+# Heavy Data & Generated Results
+# ==========================================
+#results/
+#result/
+#output/
+#outputs/
+#data/
+#datasets/
+
+# ==========================================
+# Media & Heavy Files (Images, Audio, Video)
+# ==========================================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+
+
+# ==========================================
+# IDEs and Text Editors Configurations
+# ==========================================
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# ==========================================
+# Local Environment Variables & Secrets
+# ==========================================
+.env
+*.env
+.vs/
+
+# Real-case data (confidential, not published)
+*_real_case.json

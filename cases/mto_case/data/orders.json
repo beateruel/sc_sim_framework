@@ -1,0 +1,916 @@
+{
+  "orders": [
+    {
+      "id": "O001",
+      "product_id": "1",
+      "product_name": "Product_A",
+      "product_description": "Apparel set",
+      "product_material_per_piece": 0.82,
+      "number_styles": 1,
+      "number_of_units": 180,
+      "sample_units": 5,
+      "init_date": "03/01/2022",
+      "init_fullfilment_date": "31/01/2022",
+      "expected_delivery_date": "21/02/2022",
+      "selling_price": 16.5,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3200
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 6.95,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1250
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O002",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.74,
+      "number_styles": 1,
+      "number_of_units": 120,
+      "sample_units": 5,
+      "init_date": "10/01/2022",
+      "init_fullfilment_date": "07/02/2022",
+      "expected_delivery_date": "28/02/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3300
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.05,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1320
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O003",
+      "product_id": "1",
+      "product_name": "Product_A",
+      "product_description": "Apparel set",
+      "product_material_per_piece": 0.88,
+      "number_styles": 1,
+      "number_of_units": 260,
+      "sample_units": 5,
+      "init_date": "17/01/2022",
+      "init_fullfilment_date": "14/02/2022",
+      "expected_delivery_date": "07/03/2022",
+      "selling_price": 16.5,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3100
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.1,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1400
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O004",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.91,
+      "number_styles": 1,
+      "number_of_units": 90,
+      "sample_units": 5,
+      "init_date": "24/01/2022",
+      "init_fullfilment_date": "21/02/2022",
+      "expected_delivery_date": "14/03/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3150
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.25,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1480
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    },
+    {
+      "id": "O005",
+      "product_id": "1",
+      "product_name": "Product_A",
+      "product_description": "Apparel set",
+      "product_material_per_piece": 0.79,
+      "number_styles": 1,
+      "number_of_units": 310,
+      "sample_units": 5,
+      "init_date": "31/01/2022",
+      "init_fullfilment_date": "28/02/2022",
+      "expected_delivery_date": "21/03/2022",
+      "selling_price": 16.5,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3250
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 6.9,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1190
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O006",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.76,
+      "number_styles": 1,
+      "number_of_units": 210,
+      "sample_units": 5,
+      "init_date": "07/02/2022",
+      "init_fullfilment_date": "07/03/2022",
+      "expected_delivery_date": "28/03/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3000
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.0,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1280
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O007",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.95,
+      "number_styles": 1,
+      "number_of_units": 420,
+      "sample_units": 5,
+      "init_date": "14/02/2022",
+      "init_fullfilment_date": "14/03/2022",
+      "expected_delivery_date": "04/04/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3050
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.35,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1510
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    },
+    {
+      "id": "O008",
+      "product_id": "1",
+      "product_name": "Product_D",
+      "product_description": "Short apparel set",
+      "product_material_per_piece": 0.68,
+      "number_styles": 1,
+      "number_of_units": 150,
+      "sample_units": 5,
+      "init_date": "21/02/2022",
+      "init_fullfilment_date": "21/03/2022",
+      "expected_delivery_date": "11/04/2022",
+      "selling_price": 15.2,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3350
+      },
+      "supplier_material": {
+        "id": 3,
+        "name": "Material supplier C",
+        "location": "Region_8",
+        "price": 6.75,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 980
+      },
+      "supplier_sample": {
+        "id": 4,
+        "name": "Sample supplier C",
+        "location": "Region_9",
+        "price": 3.2,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 260
+      }
+    },
+    {
+      "id": "O009",
+      "product_id": "1",
+      "product_name": "Product_D",
+      "product_description": "Short apparel set",
+      "product_material_per_piece": 0.72,
+      "number_styles": 1,
+      "number_of_units": 280,
+      "sample_units": 5,
+      "init_date": "28/02/2022",
+      "init_fullfilment_date": "28/03/2022",
+      "expected_delivery_date": "18/04/2022",
+      "selling_price": 15.2,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3120
+      },
+      "supplier_material": {
+        "id": 3,
+        "name": "Material supplier C",
+        "location": "Region_8",
+        "price": 6.85,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1050
+      },
+      "supplier_sample": {
+        "id": 4,
+        "name": "Sample supplier C",
+        "location": "Region_9",
+        "price": 3.2,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 260
+      }
+    },
+    {
+      "id": "O010",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.78,
+      "number_styles": 1,
+      "number_of_units": 360,
+      "sample_units": 5,
+      "init_date": "07/03/2022",
+      "init_fullfilment_date": "04/04/2022",
+      "expected_delivery_date": "25/04/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3180
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.15,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1360
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O011",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.89,
+      "number_styles": 1,
+      "number_of_units": 110,
+      "sample_units": 5,
+      "init_date": "14/03/2022",
+      "init_fullfilment_date": "11/04/2022",
+      "expected_delivery_date": "02/05/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3400
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.3,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1430
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    },
+    {
+      "id": "O012",
+      "product_id": "1",
+      "product_name": "Product_A",
+      "product_description": "Apparel set",
+      "product_material_per_piece": 0.86,
+      "number_styles": 1,
+      "number_of_units": 480,
+      "sample_units": 5,
+      "init_date": "21/03/2022",
+      "init_fullfilment_date": "18/04/2022",
+      "expected_delivery_date": "29/05/2022",
+      "selling_price": 16.5,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3200
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.2,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1500
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O013",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.73,
+      "number_styles": 1,
+      "number_of_units": 190,
+      "sample_units": 5,
+      "init_date": "28/03/2022",
+      "init_fullfilment_date": "25/04/2022",
+      "expected_delivery_date": "16/05/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3090
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.05,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1310
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O014",
+      "product_id": "1",
+      "product_name": "Product_D",
+      "product_description": "Short apparel set",
+      "product_material_per_piece": 0.7,
+      "number_styles": 1,
+      "number_of_units": 330,
+      "sample_units": 5,
+      "init_date": "04/04/2022",
+      "init_fullfilment_date": "02/05/2022",
+      "expected_delivery_date": "12/06/2022",
+      "selling_price": 15.2,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3270
+      },
+      "supplier_material": {
+        "id": 3,
+        "name": "Material supplier C",
+        "location": "Region_8",
+        "price": 6.9,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1120
+      },
+      "supplier_sample": {
+        "id": 4,
+        "name": "Sample supplier C",
+        "location": "Region_9",
+        "price": 3.2,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 260
+      }
+    },
+    {
+      "id": "O015",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.93,
+      "number_styles": 1,
+      "number_of_units": 560,
+      "sample_units": 5,
+      "init_date": "11/04/2022",
+      "init_fullfilment_date": "09/05/2022",
+      "expected_delivery_date": "15/06/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3170
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.45,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1560
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    },
+    {
+      "id": "O016",
+      "product_id": "1",
+      "product_name": "Product_A",
+      "product_description": "Apparel set",
+      "product_material_per_piece": 0.84,
+      "number_styles": 1,
+      "number_of_units": 240,
+      "sample_units": 5,
+      "init_date": "18/04/2022",
+      "init_fullfilment_date": "16/05/2022",
+      "expected_delivery_date": "06/06/2022",
+      "selling_price": 16.5,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3060
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.1,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1380
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O017",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.75,
+      "number_styles": 1,
+      "number_of_units": 130,
+      "sample_units": 5,
+      "init_date": "25/04/2022",
+      "init_fullfilment_date": "23/05/2022",
+      "expected_delivery_date": "13/06/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3330
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.0,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1270
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O018",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.96,
+      "number_styles": 1,
+      "number_of_units": 610,
+      "sample_units": 5,
+      "init_date": "02/05/2022",
+      "init_fullfilment_date": "30/05/2022",
+      "expected_delivery_date": "20/06/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3220
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1620
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    },
+    {
+      "id": "O019",
+      "product_id": "1",
+      "product_name": "Product_D",
+      "product_description": "Short apparel set",
+      "product_material_per_piece": 0.69,
+      "number_styles": 1,
+      "number_of_units": 170,
+      "sample_units": 5,
+      "init_date": "09/05/2022",
+      "init_fullfilment_date": "06/06/2022",
+      "expected_delivery_date": "27/07/2022",
+      "selling_price": 15.2,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3040
+      },
+      "supplier_material": {
+        "id": 3,
+        "name": "Material supplier C",
+        "location": "Region_8",
+        "price": 6.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1020
+      },
+      "supplier_sample": {
+        "id": 4,
+        "name": "Sample supplier C",
+        "location": "Region_9",
+        "price": 3.2,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 260
+      }
+    },
+    {
+      "id": "O020",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.77,
+      "number_styles": 1,
+      "number_of_units": 390,
+      "sample_units": 5,
+      "init_date": "16/05/2022",
+      "init_fullfilment_date": "13/06/2022",
+      "expected_delivery_date": "04/07/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3290
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.18,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1410
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O021",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.94,
+      "number_styles": 1,
+      "number_of_units": 720,
+      "sample_units": 5,
+      "init_date": "23/05/2022",
+      "init_fullfilment_date": "20/06/2022",
+      "expected_delivery_date": "11/08/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3160
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.48,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1580
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    },
+    {
+      "id": "O022",
+      "product_id": "1",
+      "product_name": "Product_A",
+      "product_description": "Apparel set",
+      "product_material_per_piece": 0.81,
+      "number_styles": 1,
+      "number_of_units": 220,
+      "sample_units": 5,
+      "init_date": "30/05/2022",
+      "init_fullfilment_date": "27/06/2022",
+      "expected_delivery_date": "18/07/2022",
+      "selling_price": 16.5,
+      "client": {
+        "id": 3,
+        "name": "Client_C",
+        "location": "Region_7",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3080
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.08,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1340
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O023",
+      "product_id": "2",
+      "product_name": "Product_B",
+      "product_description": "Light apparel item",
+      "product_material_per_piece": 0.74,
+      "number_styles": 1,
+      "number_of_units": 430,
+      "sample_units": 5,
+      "init_date": "06/06/2022",
+      "init_fullfilment_date": "04/07/2022",
+      "expected_delivery_date": "25/07/2022",
+      "selling_price": 15.8,
+      "client": {
+        "id": 1,
+        "name": "Client_A",
+        "location": "Region_1",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3310
+      },
+      "supplier_material": {
+        "id": 1,
+        "name": "Material supplier A",
+        "location": "Region_2",
+        "price": 7.12,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1390
+      },
+      "supplier_sample": {
+        "id": 2,
+        "name": "Sample supplier A",
+        "location": "Region_3",
+        "price": 3.5,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 350
+      }
+    },
+    {
+      "id": "O024",
+      "product_id": "3",
+      "product_name": "Product_C",
+      "product_description": "Long apparel item",
+      "product_material_per_piece": 0.98,
+      "number_styles": 1,
+      "number_of_units": 800,
+      "sample_units": 5,
+      "init_date": "13/06/2022",
+      "init_fullfilment_date": "11/07/2022",
+      "expected_delivery_date": "21/08/2022",
+      "selling_price": 18.2,
+      "client": {
+        "id": 2,
+        "name": "Client_B",
+        "location": "Region_4",
+        "prototype_distribution_mode_of_transport": "AIR",
+        "fullfilment_distribution_mode_of_transport": "AIR",
+        "distance": 3190
+      },
+      "supplier_material": {
+        "id": 2,
+        "name": "Material supplier B",
+        "location": "Region_5",
+        "price": 7.55,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 1650
+      },
+      "supplier_sample": {
+        "id": 3,
+        "name": "Sample supplier B",
+        "location": "Region_6",
+        "price": 3.8,
+        "material_reception_mode_of_transport": "ROAD",
+        "distance": 420
+      }
+    }
+  ]
+}

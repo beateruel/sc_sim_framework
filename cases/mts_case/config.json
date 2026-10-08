@@ -1,0 +1,64 @@
+{
+  "scenario": "mts_case",
+  "input_files": {
+    "demand": "demand.json",
+    "bom": "BOM.json",
+    "suppliers": "suppliers.json"
+  },
+  "simulation": {
+    "demand_variation": 0.0,
+    "shortage_start_week": -1,
+    "shortage_end_week": -1
+  },
+  "initial_inventory": {
+    "raw_material": {
+      "1": 800,
+      "2": 100
+    },
+    "finished_goods": {
+      "1": 5000,
+      "2": 5000
+    }
+  },
+  "material_prices": {
+    "mode": "linear",
+    "base_price": 7.5,
+    "monthly_increment": 0.1,
+    "months": 15
+  },
+  "mts_policy": {
+    "weeks_per_month": 4,
+    "purchase_cycle_weeks": 12,
+    "demand_coverage_weeks": 12,
+    "distributor_release_cycle_weeks": 4
+  },
+  "costs": {
+    "labour_cost_per_hour": 17,
+    "ordering_cost": 100,
+    "holding_rate": 0.2,
+    "product_price": 0.1,
+    "client_distribution_cost": 100
+  },
+  "emissions": {
+    "client_distribution_emissions": 100
+  },
+  "time": {
+    "client_transport_time_hours": 24,
+    "client_storage_time_hours": 24
+  },
+  "outputs": {
+    "base_results_dir": "results/baseline",
+    "save_plots": true,
+    "show_plots": false
+  },
+  "plots": {
+  "raw_material_id": "1",
+  "raw_material_label": "RM1",
+  "product_ids": ["1", "2"],
+  "product_labels": {
+    "1": "P1",
+    "2": "P2"
+  },
+  "raw_material_label": "RM1"
+}
+}

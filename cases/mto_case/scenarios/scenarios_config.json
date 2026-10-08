@@ -1,0 +1,18 @@
+{
+  "paths": {
+    "case_config": "cases/mto_case/config.json",
+    "case_data_dir": "cases/mto_case/data"
+  },
+  "prototyping": {
+    "output_file": "results_prototyping.csv",
+    "visualization_subdir": "prototyping",
+    "save_plots": true,
+    "types": ["PHYSICAL", "DIGITAL"]
+  },
+  "demand_variation": {
+    "output_file": "results_demand_variation.csv",
+    "visualization_subdir": "demand_variation",
+    "save_plots": true,
+    "multipliers": [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+  }
+}

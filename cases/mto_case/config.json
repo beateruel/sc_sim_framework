@@ -1,0 +1,16 @@
+{
+  "scenario": "mto_case",
+  "input_files": {
+    "orders": "orders.json",
+    "process_config": "process_parameters.json"
+  },
+  "simulation": {
+    "until": 8000,
+    "prototyping_type": "PHYSICAL"
+  },
+  "outputs": {
+    "base_results_dir": "results/baseline",
+    "save_gantt": true,
+    "save_inventory_plots": true
+  }
+}

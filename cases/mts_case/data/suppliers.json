@@ -1,0 +1,46 @@
+{
+  "suppliers": [
+    {
+      "supplier_id": "1",
+      "material_id": "1",
+      "material_display_name": "RM1",
+      "supplier_name": "Supplier_A",
+      "supplier_location": "Region_A",
+      "distance_unit": "km",
+      "distance_km": 1450,
+      "price_unit": "€",
+      "min_price_eur_per_kg": 6.8,
+      "max_price_eur_per_kg": 7.6,
+      "reorder_quantity_unit": "kg",
+      "reorder_quantity_kg": 700,
+      "time_unit": "weeks",
+      "reorder_point_weeks": 16,
+      "lead_time_weeks": 12,
+      "delivery_quantity_kg": 0,
+      "delivery_time_weeks": 4,
+      "delivery_mode": "ROAD",
+      "safety_stock_kg": 450
+    },
+    {
+      "supplier_id": "2",
+      "material_id": "2",
+      "material_display_name": "RM2",
+      "supplier_name": "Supplier_B",
+      "supplier_location": "Region_B",
+      "distance_unit": "km",
+      "distance_km": 2100,
+      "price_unit": "€",
+      "min_price_eur_per_kg": 5.2,
+      "max_price_eur_per_kg": 6.1,
+      "reorder_quantity_unit": "kg",
+      "reorder_quantity_kg": 700,
+      "time_unit": "weeks",
+      "reorder_point_weeks": 16,
+      "lead_time_weeks": 12,
+      "delivery_quantity_kg": 120,
+      "delivery_time_weeks": 4,
+      "safety_stock_kg": 120,
+      "delivery_mode": "ROAD"
+    }
+  ]
+}

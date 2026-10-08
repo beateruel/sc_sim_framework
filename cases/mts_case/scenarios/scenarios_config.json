@@ -1,0 +1,32 @@
+{
+  "paths": {
+    "case_config": "cases/mts_case/config.json",
+    "case_data_dir": "cases/mts_case/data",
+    "output_dir": "results/scenarios_experiments/mts",
+    "visualization_dir": "results/scenarios_experiments/mts/visualization"
+  },
+  "demand_variation": {
+    "output_file": "results_demand_variation.csv",
+    "visualization_subdir": "demand_variation",
+    "save_plots": true,
+    "variations": [-0.3, -0.2, -0.1, 0.0, 0.1, 0.2, 0.3]
+  },
+  "shortage": {
+    "output_file": "results_shortage.csv",
+    "visualization_subdir": "shortage",
+    "save_plots": true,
+    "scenarios": [
+      {"name": "shortage_4_weeks", "start_week": 9, "end_week": 13},
+      {"name": "shortage_8_weeks", "start_week": 9, "end_week": 17},
+      {"name": "shortage_12_weeks", "start_week": 9, "end_week": 21},
+      {"name": "shortage_16_weeks", "start_week": 9, "end_week": 25}
+    ]
+  },
+  "lead_time_shock": {
+    "output_file": "results_lead_time_shock.csv",
+    "visualization_subdir": "lead_time_shock",
+    "save_plots": true,
+    "lead_times_weeks": [12, 14, 16, 18, 20]
+  }
+}
+

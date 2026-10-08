@@ -1,0 +1,84 @@
+{
+  "bill_of_materials": [
+    {
+      "product_id": "1",
+      "product_name": "P1",
+      "enabled": true,
+      "description": "Bill of material for product P1",
+      "bom_class": "production",
+      "weight_unit": "g",
+      "total_weight_g": 3.2,
+      "cycle_time_unit": "s",
+      "cycle_time_s": 24,
+      "production_rate_unit": "units/cycle",
+      "production_rate_units_per_cycle": 8,
+      "scrap_percentage": 2.5,
+      "setup_time_min": 55,
+      "setup_cost_eur": 95,
+      "production_cost_eur_per_unit": 0.28,
+      "quality_check_time_min": 5,
+      "batch_size_units": 10000,
+      "safety_stock_units": 4500,
+      "materials": [
+        {
+          "material_id": "1",
+          "material_display_name": "RM1",
+          "material_name": "Synthetic polymer resin",
+          "material_weight_unit": "g",
+          "material_quantity_g_per_unit": 3.2,
+          "material_scrap_percentage": 0.5,
+          "material_oil_percentage": 0.7,
+          "density_unit": "g/cm3",
+          "density_g_cm3": 1.18,
+          "documentation_url": ""
+        }
+      ]
+    },
+    {
+      "product_id": "2",
+      "product_name": "P2",
+      "enabled": true,
+      "description": "Bill of material for product P2",
+      "bom_class": "production",
+      "weight_unit": "g",
+      "total_weight_g": 3.8,
+      "cycle_time_unit": "s",
+      "cycle_time_s": 32,
+      "production_rate_unit": "units/cycle",
+      "production_rate_units_per_cycle": 8,
+      "scrap_percentage": 2.5,
+      "setup_time_min": 60,
+      "setup_cost_eur": 100,
+      "production_cost_eur_per_unit": 0.32,
+      "quality_check_time_min": 5,
+      "batch_size_units": 10000,
+      "safety_stock_units": 4500,
+      "materials": [
+        {
+          "material_id": "1",
+          "material_display_name": "RM1",
+          "material_name": "Synthetic polymer resin",
+          "material_weight_unit": "g",
+          "material_quantity_g_per_unit": 3.2,
+          "material_scrap_percentage": 0.5,
+          "material_oil_percentage": 0.7,
+          "density_unit": "g/cm3",
+          "density_g_cm3": 1.18,
+          "documentation_url": ""
+        },
+        {
+          "material_id": "2",
+          "material_display_name": "RM2",
+          "material_name": "Synthetic flexible additive",
+          "material_weight_unit": "g",
+          "material_quantity_g_per_unit": 0.6,
+          "material_scrap_percentage": 0.5,
+          "material_oil_percentage": 0.9,
+          "density_unit": "g/cm3",
+          "density_g_cm3": 1.05,
+          "documentation_url": ""
+        }
+      ]
+    }
+  ]
+}
