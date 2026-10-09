@@ -16,6 +16,7 @@ class Scheduler:
 
     def _launch_after_delay(self, delay, order, process_fn):
         yield self.env.timeout(delay)
+        order.arrival_time = self.env.now
         print(f"Launching {order.id} at time {self.env.now}")
         yield self.env.process(process_fn(order))
 

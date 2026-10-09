@@ -6,8 +6,8 @@ def compute_lead_time(orders):
 
     for o in orders:
 
-        if hasattr(o, "finish_time"):
-            lead_time = o.finish_time
+        if o.finish_time is not None and o.arrival_time is not None:
+            lead_time = o.finish_time - o.arrival_time
         else:
             lead_time = None
 

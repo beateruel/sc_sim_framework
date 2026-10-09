@@ -26,6 +26,7 @@ class Order:
         self.end_times = {}
         self.request_times = {}
         self.last_end_time = None
+        self.arrival_time = None
         self.finish_time = None
 
         # prototyping and fulfillment make
