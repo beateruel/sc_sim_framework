@@ -192,6 +192,12 @@ If you use this repository in academic work, please cite:
   year={2026}
 }
 ```
+## Acknowledgements
+This work was developed at Fundación Zaragoza Logistics Center (ZLC) within the Horizon Europe project R3GROUP.
+
+This project has received funding from the European Union’s Horizon Europe research and innovation programme under Grant Agreement No. 101091869.
+
+Project reference: https://cordis.europa.eu/project/id/101091869
 
 ## Authors
 
