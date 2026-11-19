@@ -113,7 +113,7 @@ Each case is configured through JSON files. A small set of constants of the MTO 
 | `initial_inventory` | Initial raw-material and finished-goods inventory by item |
 | `material_prices` | Raw-material price profile over time |
 | `mts_policy` | `purchase_cycle_weeks`, `demand_coverage_weeks`, `distributor_release_cycle_weeks`, `weeks_per_month` |
-| `costs`, `emissions`, `time` | Economic, environmental and transport/storage time parameters |
+| `costs`, `emissions`, `time` | Economic parameters, emission factors and transport data (see [CO₂ accounting](#co-accounting)), and transport/storage times |
 | `outputs`, `plots` | Output folder and plotting options |
 
 **MTO (`cases/mto_case/config.json`)**
@@ -142,7 +142,7 @@ Process times, inventory policies, economic and environmental parameters of the 
 
 - `operations/`: inventory, purchase orders, releases, production, distribution, weekly metrics and weekly demand.
 - `kpis/`: OTIF, fill rate, stockouts, average inventory, inventory turnover, variability and peaks, throughput, production-plan fulfilment, production lead time and service level.
-- `cost/`, `profit/`, `emissions/`: cost breakdown, profit and environmental impact.
+- `cost/`, `profit/`, `emissions/`: cost breakdown, profit and environmental impact. Total cost is the sum of purchase, ordering, production (labour hours of production actually carried out × labour rate) and distribution costs, and matches the simulation summary. Inventory holding cost is reported separately (`holding_cost_memo`) and is not included in the total.
 - `visualization/`: inventory, finished-goods and demand plots.
 
 **MTO** (`results/baseline/mto_case/`)
@@ -156,6 +156,19 @@ Process times, inventory policies, economic and environmental parameters of the 
 
 - One summary CSV per experiment (`results_demand_variation.csv`, `results_shortage.csv`, `results_lead_time_shock.csv`, `results_prototyping.csv`).
 - `visualization/`: per-scenario plots and the summary figures of the manuscript.
+
+## CO₂ accounting
+
+Both engines compute transport and energy emissions with an activity-based approach (tonne-km, in the spirit of the GLEC Framework). All results are reported in kg CO₂e.
+
+| | MTS | MTO |
+|---|---|---|
+| Inbound transport | Purchased quantity (t) × supplier distance (km) × emission factor of the delivery mode (g CO₂e/tkm) | Sample and production material (t) × supplier distance × emission factor of the mode (road or air) |
+| Outbound transport | One trip per week with shipments: trip distance (km) × trip load (t) × emission factor. The trip is accounted at its nominal load, so this term depends on the number of trips and not on the shipped volume | Order quantity (t) × client distance × emission factor of the mode (road or air) |
+| Energy (Scope 2) | Production hours × energy rate (kWh/h) × grid intensity (g CO₂e/kWh); set to 0 in the provided case | Office and shop-floor hours × energy rate × grid intensity |
+| Parameters | `emissions` block of `cases/mts_case/config.json` and `distance_km` / `delivery_mode` in `suppliers.json` | `environmental` block of `process_parameters.json` and supplier and client data per order |
+
+Outputs: `emissions/emissions.csv` per case and the `total_emissions` column (kg CO₂e) of the experiment summaries. Because the MTS outbound term is trip-based, it does not discriminate between MTS scenarios in a meaningful way (it decreases when a stock-out prevents a shipment), so it is computed but not used as a performance indicator of the MTS experiments in the manuscript.
 
 ## Known limitations and scope of this version
 

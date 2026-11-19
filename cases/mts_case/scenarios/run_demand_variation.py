@@ -67,8 +67,7 @@ def build_material_prices(config: dict) -> dict:
 
 def build_mts_config(config: dict) -> MTSConfig:
     mts_policy = config["mts_policy"]
-    costs = config["costs"]
-    emissions = config["emissions"]
+    costs = config["costs"]   
     time = config["time"]
 
     return MTSConfig(
@@ -79,7 +78,7 @@ def build_mts_config(config: dict) -> MTSConfig:
         client_transport_time_hours=time["client_transport_time_hours"],
         client_storage_time_hours=time["client_storage_time_hours"],
         client_distribution_cost=costs["client_distribution_cost"],
-        client_distribution_emissions=emissions["client_distribution_emissions"],
+        #client_distribution_emissions=emissions["client_distribution_emissions"],
         weeks_per_month=mts_policy["weeks_per_month"],
         purchase_cycle_weeks=mts_policy["purchase_cycle_weeks"],
         demand_coverage_weeks=mts_policy["demand_coverage_weeks"],
@@ -146,6 +145,7 @@ def extract_kpis(
     summary: dict,
     results: dict,
     case_config: dict,
+    case_data_dir: Path,     
 ) -> dict:
     df_otif, service_level = compute_mts_otif(
         results["distribution"],
@@ -186,6 +186,8 @@ def extract_kpis(
         distribution_df=results["distribution"],
         inventory_df=results["inventory"],
         holding_rate=case_config["costs"]["holding_rate"],
+        labour_cost_per_hour=case_config["costs"]["labour_cost_per_hour"],
+        client_distribution_cost=case_config["costs"]["client_distribution_cost"],
     )
 
     df_profit = compute_mts_profit(
@@ -197,6 +199,8 @@ def extract_kpis(
         purchase_orders_df=results["purchase_orders"],
         distribution_df=results["distribution"],
         production_df=results["production"],
+        suppliers_file=case_data_dir / case_config["input_files"]["suppliers"],    
+        emissions_config=case_config["emissions"],     
     )
 
     return {
@@ -274,7 +278,7 @@ def extract_kpis(
         "total_cost": _get_first_numeric(df_costs, "total_cost"),
         "total_profit": _get_first_numeric(df_profit, "total_profit"),
         "profit_margin": _get_first_numeric(df_profit, "profit_margin"),
-        "total_emissions": _numeric_sum(df_emissions),
+        "total_emissions": _safe_sum(df_emissions, "total_emissions_kgco2"),
         "summary_total_income": summary.get("total_income"),
         "summary_total_cost": summary.get("total_cost"),
         "summary_total_profit": summary.get("total_profit"),
@@ -374,6 +378,12 @@ def _numeric_sum(df: pd.DataFrame):
 
     return numeric_df.sum().sum()
 
+def _safe_sum(df: pd.DataFrame, column: str):
+    if df is None or df.empty or column not in df.columns:
+        return None
+
+    return df[column].sum()
+
 
 def _get_first_numeric(df: pd.DataFrame, preferred_column: str):
     if df is None or df.empty:
@@ -470,6 +480,7 @@ def main() -> None:
                 summary=summary,
                 results=results,
                 case_config=case_config,
+                case_data_dir=case_data_dir,
             )
         )
 

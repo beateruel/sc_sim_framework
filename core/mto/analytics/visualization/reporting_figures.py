@@ -173,8 +173,8 @@ def compute_relative_improvements(
     )
 
     waste_reduction = (
-        (physical["total_waste"] - digital["total_waste"])
-        / physical["total_waste"]
+        (physical["average_waste"] - digital["average_waste"])
+        / physical["average_waste"]
         * 100
     )
 
@@ -271,12 +271,7 @@ def plot_demand_variation(
         rotate_x=True,
     )
 
-    fig.suptitle(
-        "Impact of demand variation on MTO performance",
-        fontsize=13,
-        y=1.02,
-    )
-
+   
     fig.tight_layout()
 
     save_figure(
@@ -299,7 +294,7 @@ def plot_digital_prototyping(
         "total_cost",
         "total_recognized_profit",
         "total_emissions",
-        "total_waste",
+        "average_waste",
     ]
 
     validate_columns(
@@ -336,10 +331,10 @@ def plot_digital_prototyping(
     # (c) Total waste
     axs[1, 0].bar(
         labels,
-        df["total_waste"],
+        df["average_waste"]*100,
     )
-    axs[1, 0].set_title("(c) Total waste")
-    axs[1, 0].set_ylabel("Waste (kg)")
+    axs[1, 0].set_title("(c) Average waste per order")
+    axs[1, 0].set_ylabel("Waste ratio (%)")
 
    # (d) Recognized profit margin
 
@@ -365,13 +360,7 @@ def plot_digital_prototyping(
             ha="center",
         )
 
-
-
-    fig.suptitle(
-        "Impact of digital prototyping on MTO sustainability performance",
-        fontsize=13,
-        y=1.02,
-    )
+    
 
     fig.tight_layout()
 

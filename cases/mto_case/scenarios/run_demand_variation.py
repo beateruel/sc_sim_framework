@@ -205,7 +205,7 @@ def extract_kpis(
             and total_recognized_revenue is not None
             else None
         ),
-        "total_emissions": _numeric_sum(df_emissions),
+        "total_emissions":  _safe_sum(df_emissions, "total_kgco2e"),
         "total_waste": total_waste,
         "average_waste": average_waste,
         "completed_orders": _completed_orders(completed_orders),

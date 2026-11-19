@@ -110,14 +110,14 @@ def compute_environmental_impact(orders, config):
 
         rows.append(
             {
-                "order": o.id,
+               "order": o.id,
                 "prototyping_type": getattr(o, "prototyping_type", None),
                 "sample_units_accounted": sample_units,
-                "sample_transport_CO2": sample_transport_CO2,
-                "material_transport_CO2": material_transport_CO2,
-                "distribution_CO2": distribution_CO2,
-                "production_CO2": production_CO2,
-                "total_CO2": total_CO2,
+                "sample_transport_kgco2e": sample_transport_CO2 / 1000,
+                "material_transport_kgco2e": material_transport_CO2 / 1000,
+                "distribution_kgco2e": distribution_CO2 / 1000,
+                "production_kgco2e": production_CO2 / 1000,
+                "total_kgco2e": total_CO2 / 1000,
                 "waste": waste
             }
         )

@@ -23,8 +23,7 @@ class MTSConfig:
     client_transport_time_hours: float = 24.0
     client_storage_time_hours: float = 24.0
     client_distribution_cost: float = 100.0
-    client_distribution_emissions: float = 100.0
-
+    
     weeks_per_month: int = 4
     purchase_cycle_weeks: int = 12
     demand_coverage_weeks: int = 12
@@ -92,7 +91,7 @@ class MTSStrategy:
             client_transport_time_hours=self.config.client_transport_time_hours,
             client_storage_time_hours=self.config.client_storage_time_hours,
             client_distribution_cost=self.config.client_distribution_cost,
-            client_distribution_emissions=self.config.client_distribution_emissions,
+            
         )
 
         self.weekly_metrics: list[dict] = []
@@ -116,7 +115,6 @@ class MTSStrategy:
                 "total_ordering_cost": self.sourcing.total_ordering_cost,
                 "total_production_cost": self.make.total_production_cost,
                 "total_distribution_cost": self.deliver.total_distribution_cost,
-                "total_distribution_emissions": self.deliver.total_distribution_emissions,
                 "total_income": self.deliver.total_income,
                 "stockout": self.inventory.stockouts.get(week, 0),
             }
@@ -153,7 +151,6 @@ class MTSStrategy:
             "total_ordering_cost": self.sourcing.total_ordering_cost,
             "total_production_cost": self.make.total_production_cost,
             "total_distribution_cost": self.deliver.total_distribution_cost,
-            "total_distribution_emissions": self.deliver.total_distribution_emissions,
             "total_income": self.deliver.total_income,
             "total_cost": total_cost,
             "total_profit": self.deliver.total_income - total_cost,

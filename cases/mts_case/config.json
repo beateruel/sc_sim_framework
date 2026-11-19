@@ -40,7 +40,13 @@
     "client_distribution_cost": 100
   },
   "emissions": {
-    "client_distribution_emissions": 100
+    "road_emission_factor_gco2_per_tkm": 74,
+    "air_emission_factor_gco2_per_tkm": 629,
+    "client_distribution_mode": "ROAD",
+    "client_distance_km": 3152,
+    "client_trip_load_tonnes": 18,
+    "production_energy_kwh_per_h": 0.0,
+    "grid_carbon_intensity_gco2_per_kwh": 245
   },
   "time": {
     "client_transport_time_hours": 24,

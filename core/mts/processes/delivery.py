@@ -16,7 +16,7 @@ class MTSDeliverProcess:
         client_transport_time_hours: float = 24.0,
         client_storage_time_hours: float = 24.0,
         client_distribution_cost: float = 100.0,
-        client_distribution_emissions: float = 100.0,
+        
     ) -> None:
         self.inventory = inventory
         self.weekly_demand = weekly_demand
@@ -25,12 +25,11 @@ class MTSDeliverProcess:
         self.client_transport_time_hours = client_transport_time_hours
         self.client_storage_time_hours = client_storage_time_hours
         self.client_distribution_cost = client_distribution_cost
-        self.client_distribution_emissions = client_distribution_emissions
+        
 
         self.distribution_log: list[dict] = []
 
         self.total_distribution_cost = 0.0
-        self.total_distribution_emissions = 0.0
         self.total_income = 0.0
 
     def execute_week(self, week: int) -> None:
@@ -72,8 +71,7 @@ class MTSDeliverProcess:
                 }
             )
 
-        self.total_distribution_cost += self.client_distribution_cost
-        self.total_distribution_emissions += self.client_distribution_emissions
+        self.total_distribution_cost += self.client_distribution_cost        
 
     def _get_demand_for_week(self, week: int) -> pd.DataFrame:
         return self.weekly_demand[

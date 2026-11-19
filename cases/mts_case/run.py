@@ -249,6 +249,7 @@ def save_cost_profit_emissions(
     results: dict,
     config: dict,
     folders: dict,
+    data_path: Path,
 ) -> None:
     df_costs = compute_mts_costs(
         purchase_orders_df=results["purchase_orders"],
@@ -256,6 +257,8 @@ def save_cost_profit_emissions(
         distribution_df=results["distribution"],
         inventory_df=results["inventory"],
         holding_rate=config["costs"]["holding_rate"],
+        labour_cost_per_hour=config["costs"]["labour_cost_per_hour"],
+        client_distribution_cost=config["costs"]["client_distribution_cost"],
     )
 
     df_profit = compute_mts_profit(
@@ -267,6 +270,8 @@ def save_cost_profit_emissions(
         purchase_orders_df=results["purchase_orders"],
         distribution_df=results["distribution"],
         production_df=results["production"],
+        suppliers_file=data_path / config["input_files"]["suppliers"],
+        emissions_config=config["emissions"],
     )
 
     df_costs.to_csv(folders["cost"] / "costs.csv", index=False)
@@ -352,7 +357,6 @@ def main() -> None:
 
     mts_policy = config["mts_policy"]
     costs = config["costs"]
-    emissions = config["emissions"]
     time = config["time"]
 
     mts_config = MTSConfig(
@@ -363,7 +367,7 @@ def main() -> None:
         client_transport_time_hours=time["client_transport_time_hours"],
         client_storage_time_hours=time["client_storage_time_hours"],
         client_distribution_cost=costs["client_distribution_cost"],
-        client_distribution_emissions=emissions["client_distribution_emissions"],
+        #client_distribution_emissions=emissions["client_distribution_emissions"],
         weeks_per_month=mts_policy["weeks_per_month"],
         purchase_cycle_weeks=mts_policy["purchase_cycle_weeks"],
         demand_coverage_weeks=mts_policy["demand_coverage_weeks"],
@@ -412,6 +416,9 @@ def main() -> None:
         results=results_from_files,
         config=config,
         folders=folders,
+        data_path=data_path,
+
+
     )
 
     save_visualizations(
