@@ -11,6 +11,7 @@ The methodology is applied to two structurally different manufacturing supply ch
 | Fulfilment logic | Inventory-driven: periodic raw-material replenishment, production to a safety-stock target, delivery from finished-goods stock | Order-driven: order approval, prototyping (physical or digital), then order fulfilment |
 | Execution mechanism | Fixed-increment, time-stepped simulation (weekly periods) | Discrete-event simulation with next-event time advance ([SimPy](https://simpy.readthedocs.io/)) |
 | Stress-testing scenarios | Demand variation, supply interruption, supplier lead-time increase | Demand variation, physical vs digital prototyping |
+| Robustness tests (stochastic) | Noise on weekly demand and supplier lead time, on the baseline and a four-week interruption | Noise on order quantity and activity durations, on the baseline, +30% demand and physical vs digital prototyping |
 
 ## Methodology
 
@@ -34,18 +35,18 @@ Each engine mirrors the SCOR structure: `core/mts/processes` and `core/mto/proce
 │   │   ├── config.json              # Baseline configuration (policy, costs, inventory, outputs)
 │   │   ├── data/                    # Demand, bill of materials and suppliers (JSON)
 │   │   ├── run.py                   # Baseline simulation
-│   │   └── scenarios/               # Stress-testing experiments and scenarios_config.json
+│   │   └── scenarios/               # Stress-testing experiments, robustness test and scenarios_config.json
 │   └── mto_case/
 │       ├── config.json              # Baseline configuration
 │       ├── data/                    # Orders and process parameters (JSON)
 │       ├── run.py                   # Baseline simulation
-│       └── scenarios/               # Stress-testing experiments and scenarios_config.json
+│       └── scenarios/               # Stress-testing experiments, robustness test and scenarios_config.json
 ├── core/
 │   ├── mts/                         # Time-stepped engine: data, engine, entities, processes, simulation, analytics
 │   └── mto/                         # SimPy engine: data, engine, entities, processes, resources, workflows, analytics
 ├── results/
 │   ├── baseline/                    # Baseline outputs per case
-│   └── experiments/                 # Scenario outputs and figures
+│   └── experiments/                 # Scenario and robustness outputs and figures
 ├── requirements.txt
 ├── LICENSE
 └── README.md
@@ -90,6 +91,17 @@ python -m cases.mto_case.scenarios.run_prototyping
 ```
 
 Outputs are written to `results/experiments/<case>/`. Each run takes from a few seconds to about ten seconds on a standard laptop.
+
+**Robustness tests (stochastic noise)**
+
+The scenario experiments above are deterministic. The robustness tests add random noise to selected inputs, with 50 replications per variant and common random numbers (seeds `0` to `R-1`, the same across variants and scenarios, so that differences between variants are paired):
+
+```bash
+python -m cases.mts_case.scenarios.run_robustness
+python -m cases.mto_case.scenarios.run_robustness
+```
+
+Outputs are written to `results/experiments/<case>/`.
 
 **Figures of the manuscript**
 
@@ -136,6 +148,21 @@ Process times, inventory policies, economic and environmental parameters of the 
 | MTO | Demand variation | Demand multipliers from 0.7 to 1.3 in steps of 0.1 |
 | MTO | Prototyping | `PHYSICAL` vs `DIGITAL` |
 
+The `robustness` block of the same files defines the stochastic tests:
+
+| Case | Parameter | Value |
+|---|---|---|
+| MTS | `replications` | 50 |
+| MTS | `demand_cv` | 0.1 (coefficient of variation of the actual weekly demand; the planning demand is unchanged) |
+| MTS | `lead_time_jitter_weeks` | 1 (uniform ±1 week on the lead time of each purchase order) |
+| MTS | `scenarios` | Baseline and four-week interruption (`start_week` 9, `end_week` 13) |
+| MTO | `replications` | 50 |
+| MTO | `quantity_cv` | 0.1 (coefficient of variation of the order quantity) |
+| MTO | `duration_cv` | 0.15 (lognormal multiplier with mean 1 on the durations of approval, design and production; transport is not randomised) |
+| MTO | `multipliers`, `prototyping_types` | `[1.0, 1.3]` and `[PHYSICAL, DIGITAL]` |
+
+Each case is run in four variants: deterministic (reference), demand or quantity noise, lead-time or duration noise, and both. The noise levels are assumptions and not estimates from company data.
+
 ## Outputs
 
 **MTS** (`results/baseline/mts_case/`)
@@ -155,6 +182,7 @@ Process times, inventory policies, economic and environmental parameters of the 
 **Experiments** (`results/experiments/<case>/`)
 
 - One summary CSV per experiment (`results_demand_variation.csv`, `results_shortage.csv`, `results_lead_time_shock.csv`, `results_prototyping.csv`).
+- Robustness tests: `results_robustness.csv` (one row per run) and `results_robustness_summary.csv` (mean, standard deviation, 5th and 95th percentile per scenario and variant) in each case; in the MTO case also `results_robustness_prototyping_paired.csv` (paired differences DIGITAL minus PHYSICAL per seed).
 - `visualization/`: per-scenario plots and the summary figures of the manuscript.
 
 ## CO₂ accounting
@@ -190,7 +218,7 @@ This release is a first working implementation of the methodology (a minimum via
 
 ## Reproducibility
 
-- The simulations contain no random components: the same configuration and input files always produce the same results.
+- The simulations of the baseline and of the scenario experiments contain no random components: the same configuration and input files always produce the same results. The robustness tests use random noise with fixed seeds, so they are also reproducible. By default (`demand_cv`, `lead_time_jitter_weeks`, `quantity_cv` and `duration_cv` not set) the noise is switched off.
 - Case data and parameters are separated from the model logic wherever possible, so most scenarios are defined by changing the JSON files without modifying the code. The exceptions are the constants listed in [Known limitations](#known-limitations-and-scope-of-this-version).
 - The experiments reported in the manuscript are defined in the `scenarios_config.json` files and can be reproduced with the commands above.
 

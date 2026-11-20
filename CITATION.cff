@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "SC Sim Framework: a transferable and composable simulation framework for supply chain digital twins"
+type: software
+version: 1.0.0
+date-released: 2026-11-20
+license: MIT
+repository-code: "https://github.com/beateruel/sc_sim_framework"
+authors:
+  - family-names: Royo
+    given-names: Beatriz
+    affiliation: "Fundación Zaragoza Logistics Center (ZLC)"
+  - family-names: de la Cruz
+    given-names: María Teresa
+    affiliation: "Fundación Zaragoza Logistics Center (ZLC)"
+abstract: "Open-source Python implementation of a methodology that translates SCOR process representations into executable supply chain simulation models. It includes a time-stepped Make-to-Stock plastic injection model and a SimPy discrete-event Make-to-Order apparel model, with configuration files, scenario experiments and stochastic robustness tests."
+keywords:
+  - supply chain digital twin
+  - SCOR
+  - BPMN
+  - simulation
+  - make-to-stock
+  - make-to-order
