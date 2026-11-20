@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Optional
+import random
 
 import pandas as pd
 
@@ -36,6 +37,8 @@ class MTSSourcingProcess:
         ordering_cost: float = 100.0,
         shortage_start_week: int = -1,
         shortage_end_week: int = -1,
+        lead_time_jitter_weeks: int = 0,                
+        rng: Optional[random.Random] = None,
     ) -> None:
         self.inventory = inventory
         self.weekly_demand = weekly_demand
@@ -51,6 +54,8 @@ class MTSSourcingProcess:
 
         self.shortage_start_week = shortage_start_week
         self.shortage_end_week = shortage_end_week
+        self.lead_time_jitter_weeks = int(lead_time_jitter_weeks)
+        self.rng = rng or random.Random(0)
 
         self.purchase_orders: list[PurchaseOrder] = []
         self.release_log: list[dict] = []
@@ -101,10 +106,20 @@ class MTSSourcingProcess:
                 material_id=material_id,
                 quantity=quantity,
             )
-
+            
             lead_time_weeks = int(
                 supplier.get("lead_time_weeks", 0)
             )
+
+            if self.lead_time_jitter_weeks > 0:
+                lead_time_weeks = max(
+                    0,
+                    lead_time_weeks
+                    + self.rng.randint(
+                        -self.lead_time_jitter_weeks,
+                        self.lead_time_jitter_weeks,
+                ),
+             )
 
             self._schedule_releases_for_purchase(
                 material_id=material_id,

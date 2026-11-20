@@ -1,4 +1,4 @@
-from core.mto.utils.time_utils import working_time
+from core.mto.utils.time_utils import working_time, noisy
 
 
 def run(env, order, resources, config, phase):
@@ -66,7 +66,7 @@ def run(env, order, resources, config, phase):
         # PRODUCTION TIME
         # -----------------------------
         rate = config["operational"]["product_production_rate_min_units_per_h"]
-        duration = quantity / rate
+        duration = noisy(quantity / rate)
 
         yield from working_time(env, duration)
 

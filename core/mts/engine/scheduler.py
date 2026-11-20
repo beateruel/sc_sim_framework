@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Optional
+import random
 
 import pandas as pd
 
@@ -28,6 +29,8 @@ class MTSConfig:
     purchase_cycle_weeks: int = 12
     demand_coverage_weeks: int = 12
     distributor_release_cycle_weeks: int = 4
+    lead_time_jitter_weeks: int = 0
+    random_seed: Optional[int] = None
 
 
 class MTSStrategy:
@@ -75,6 +78,8 @@ class MTSStrategy:
             ordering_cost=self.config.ordering_cost,
             shortage_start_week=self.shortage_start_week,
             shortage_end_week=self.shortage_end_week,
+            lead_time_jitter_weeks=self.config.lead_time_jitter_weeks,     
+            rng=random.Random(self.config.random_seed),
         )
 
         self.make = MTSMakeProcess(

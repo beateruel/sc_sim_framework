@@ -14,5 +14,17 @@
     "visualization_subdir": "demand_variation",
     "save_plots": true,
     "multipliers": [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]
+  },
+   "robustness": {
+    "output_file": "results_robustness.csv",
+    "summary_file": "results_robustness_summary.csv",
+    "replications": 50,
+    "quantity_cv": 0.1,
+    "duration_cv": 0.15,
+    "multipliers": [1.0, 1.3],
+     "prototyping_types": [
+      "PHYSICAL",
+      "DIGITAL"
+    ]
   }
 }

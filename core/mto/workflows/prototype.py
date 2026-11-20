@@ -1,6 +1,6 @@
 
 from core.mto.processes import source, make, deliver
-from core.mto.utils.time_utils import working_time
+from core.mto.utils.time_utils import working_time, noisy
 
 def run(env, order, resources, config, phase="proto"):
 
@@ -20,7 +20,7 @@ def run(env, order, resources, config, phase="proto"):
 
         order.start_times["prototype_design"] = env.now
 
-        duration = config["times"]["prototyping_design_min_time_h"]
+        duration = noisy(config["times"]["prototyping_design_min_time_h"])
 
         # digital --> more time
         if order.prototyping_type == "DIGITAL":

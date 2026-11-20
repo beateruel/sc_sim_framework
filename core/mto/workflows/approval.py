@@ -1,4 +1,4 @@
-from core.mto.utils.time_utils import working_time
+from core.mto.utils.time_utils import working_time, noisy
 
 def run(env, order, resources, config):
 
@@ -22,7 +22,7 @@ def run(env, order, resources, config):
 
         order.start_times[phase] = env.now
 
-        duration = config["times"]["approval_phase_min_time_h"]
+        duration = noisy(config["times"]["approval_phase_min_time_h"])
 
         yield from working_time(env, duration)
 
