@@ -9,9 +9,11 @@ repository-code: "https://github.com/beateruel/sc_sim_framework"
 authors:
   - family-names: Royo
     given-names: Beatriz
+    orcid: "https://orcid.org/0000-0001-8208-716X"
     affiliation: "Fundación Zaragoza Logistics Center (ZLC)"
   - family-names: de la Cruz
     given-names: María Teresa
+    orcid: "https://orcid.org/0000-0001-6166-1839"
     affiliation: "Fundación Zaragoza Logistics Center (ZLC)"
 abstract: "Open-source Python implementation of a methodology that translates SCOR process representations into executable supply chain simulation models. It includes a time-stepped Make-to-Stock plastic injection model and a SimPy discrete-event Make-to-Order apparel model, with configuration files, scenario experiments and stochastic robustness tests."
 keywords:
